@@ -1,0 +1,196 @@
+/* Style notes
+Seperate the buttons more. Give delete an icon, possibly edit too. Change their color too
+
+
+Set size for counter tabs 
+
+
+*/
+
+body {
+    border: solid gold;
+    background-color: black;
+    color: white;
+}
+
+header {
+height: 10vh;
+text-align: center;
+margin-bottom: 30px;
+}
+
+#container {
+    display: flex;
+    height: 83vh;
+}
+
+div#sidebar {
+    height: 83vh;
+    overflow-y: scroll;
+    
+}
+
+.divcontent {
+    text-align: end;
+    margin: 15px;
+}
+
+.textcontent {
+width: 300px;
+text-align: end;
+margin-bottom: 20px;
+word-wrap: break-word;
+}
+
+#content .divcontent {
+display: grid;
+grid-template-areas: 
+"text text text text"
+"checkbox . edit delete";
+justify-items: start;
+margin-bottom: 30px;
+box-shadow: 0px 0px 30px 0px rgba(255, 255, 255, 0.8);
+}
+
+.deletebutton {
+
+grid-area: delete;
+margin: 10px;
+}
+
+.editbutton {
+margin: 10px;
+grid-area: edit;
+
+}
+
+.completestatus {
+    margin-left: 2rem;
+    grid-area: checkbox;
+    width: 25px;
+    height: 25px;
+}
+
+    .divcontent:has(.completestatus:checked) .textcontent:first-of-type { 
+        text-decoration: line-through;
+        color: gray; 
+        transition: all 0.3s ease; 
+    }
+
+
+.high {
+    border-right: solid red;
+    border-left: solid rgb(255, 0, 0);
+}
+
+    .divcontent.high:hover {
+        border: solid rgb(255, 0, 0);
+        box-shadow: 0 4px 25px rgba(255, 0, 0, 1) !important; 
+        transform: translateY(-5px); 
+    }
+
+.medium {
+border-right: solid rgb(255, 215, 0);
+border-left: solid gold;
+}
+
+    .divcontent.medium:hover {
+
+        border: solid rgb(255, 215, 0);
+        box-shadow: 0 4px 25px rgb(255, 215, 0, 1) !important; 
+        transform: translateY(-5px); 
+    }
+
+.low {
+border-right: solid green;
+border-left: solid green;
+}
+    .divcontent.low:hover {
+
+        border: solid rgb(0, 128, 0);
+        box-shadow: 0 4px 25px rgba(0, 128, 0, 1) !important; 
+        transform: translateY(-5px); 
+    }
+
+.categorydiv, .scheduledivitems, .homecounter {
+
+    margin: 20px;
+    /* border: solid; */
+    display: flex;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 1); 
+    border: solid rgba(255, 255, 255, 0.5);
+
+
+}
+
+.categorydiv:hover, .scheduledivitems:hover, .homecounter:hover {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 1); 
+    transform: translateY(-5px); 
+    border: solid rgba(255, 255, 255, 0.5);
+}
+
+
+#categorydiv .divcontent {
+    width: 30vh;
+
+}
+
+.scheduledivitems.counterbutton, .categorydiv.counterbutton, #homecounter {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+
+div.counterbutton :last-child {
+    width: 10%;
+    border-radius: 10px;
+}
+
+.selected {
+
+    box-shadow: 0 4px 25px rgb(255, 215, 0, 1) !important; 
+    transform: translateY(-5px); 
+
+}
+
+#editwindow {
+    width: 100vw; 
+    height: 90vh; 
+    position: fixed; 
+    top: 85px; 
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.8); 
+    z-index: 2;
+    overflow: auto;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#editcontainer {
+    background-color: black;
+    height: 24rem;
+    width: 20vw;
+    max-width: 80vw;
+    min-width: min-content;
+    z-index: 3;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1rem;
+    margin: auto;
+    border: solid gold;
+}
+
+.editformelement {
+margin: 0.5rem;
+
+}
+
+#editcontainer form {
+    background-color: black; /* Ensure the form has a solid background */
+}
+
+

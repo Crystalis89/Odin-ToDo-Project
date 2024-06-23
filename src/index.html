@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin ToDo App Project</title>
+    <!-- <script src="index.js"></script> -->
+</head>
+<body>
+    <header>
+        <div id="heading"><h1>The Odin Project - To-Do App</h1></div>
+        <form id="cardcreateform">
+
+            <label for="elementname">Sorting Category</label>
+            <input type="text" name="elementname" id="elementname" maxlength="15" placeholder="School" required>
+
+            <label for="date">Due Date</label>
+            <input type="datetime-local" name="date" id="date" placeholder="05/25/2024, 1:30 PM" required>
+
+            <label for="text">Description</label>
+            <input type="text" name="text" id="text" placeholder='Complete the project.' required>
+
+            <label for="status">Priority</label>
+            <select id="status" name="status" required>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            <!-- <input type="text" id="priority" value='high'> -->
+            <input type="submit">
+
+        </form>
+    </header>
+
+<div id="container">
+    <div id="sidebar">
+        <div id='homediv' class="homecounter counterbutton selected">
+            <h3 id="home" class="homecounter counterbutton">Home</h3>
+            <h3 id="homecounter" class="homecounter counterbutton">0</h3>
+        </div>
+            
+        <div id="scheduledayfolder" class="schedule">
+            <h1>Schedule</h1>
+            
+            <div id="todaydiv" class="today scheduledivitems counterbutton" data-value="today">
+            <h3 id="todayheader" class="today scheduledivitems counterbutton"  data-value="today">Today</h3>
+            <h3 id="todaycounter" class="today scheduledivitems counterbutton" data-value="today">0</h3>
+            </div >
+
+
+            <div id="thisweekdiv" class="thisweek scheduledivitems counterbutton" data-value="thisweek">
+              <h3 id="thisweekheader" class="thisweek scheduledivitems counterbutton" data-value="thisweek">This Week</h3>
+              <h3 id="thisweekcounter" class="thisweek scheduledivitems counterbutton" data-value="thisweek">0</h3>
+            </div >
+
+            <div id="thismonthdiv"  class="thismonth scheduledivitems counterbutton" data-value="thismonth">
+            <h3 id="thismonthheader" class="thismonth scheduledivitems counterbutton"  data-value="thismonth">This Month</h3>
+               <h3 id="thismonthcounter" class="thismonth scheduledivitems counterbutton"  data-value="thismonth">0</h3>
+            </div >
+
+            <div  id="thisyeardiv" class="thisyear scheduledivitems counterbutton" data-value="thisyear">
+              <h3 id="thisyearheader" class="thisyear scheduledivitems counterbutton"  data-value="thisyear">This Year</h3>
+              <h3 id="thisyearcounter" class="thisyear scheduledivitems counterbutton"  data-value="thisyear">0</h3>
+            </div >
+
+            <div  id="beyondyeardiv" class="beyondyear scheduledivitems counterbutton" data-value="beyondyear">
+                <h3 id="beyondyearsheader" class="beyondyear scheduledivitems counterbutton"  data-value="beyondyear">Beyond </h3>
+               <h3 id="beyondyearscounter" class="beyondyear scheduledivitems counterbutton"  data-value="beyondyear">0</h3>
+            </div >
+
+            <div  id="pastduediv" class="pastdue scheduledivitems counterbutton" data-value="pastdue">
+                <h3 id="pastdueheader" class="pastdue scheduledivitems counterbutton"  data-value="pastdue">Past Due </h3>
+                <h3 id="pastduecounter" class="pastdue scheduledivitems counterbutton"  data-value="pastdue">0</h3>
+            </div >
+  
+           
+
+           
+        </div>
+        <div id="categoryfolder" class="category">
+            <h1 id="categoryid">Categories</h1>
+            <div id="categorydiv"> </div>
+
+         </div>
+    </div>
+
+<div>
+    <div id="editwindow" class="editwindow" hidden>
+            
+        <!-- Some kind of vertical divider divne -->
+
+    <div id="editcontainer">
+        <div id="currentcontentcontainer" class="high">
+            <p id="currentcontent" class="current">Edit</p>
+        </div>
+
+        <form id="editform">
+            <label for="editelementname">Edit Category</label>
+            <input type="text" class="editformelement" name="editelementname" id="editelementname" maxlength="15" placeholder="New Category" required>
+
+            <label for="editdate">Edit Date</label>
+            <input type="datetime-local" class="editformelement" name='editdate' id="editdate" placeholder="05/25/2024, 1:30 PM" required>
+
+            <label for="edittext">Edit Text</label>
+            <input type="text" class="editformelement" name="edittext" id="edittext" placeholder='New Description' required>
+        
+             <label for="editstatus">Edit Priority</label>
+            <select id="editstatus" class="editformelement"name="editstatus" required >
+                <option value="high" id="edithigh">High</option>
+                <option value="medium" id="editmedium">Medium</option>
+                <option value="low" id="editlow">Low</option>
+              </select>
+            <input type="submit">
+        </form>
+       </div>
+    </div>
+
+    <main id="content" class="content">
+
+   
+    </main>
+
+
+</div>
+  
+
+</div>
+    
+</body>
+</html>
