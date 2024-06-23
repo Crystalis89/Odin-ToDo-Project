@@ -256,7 +256,7 @@ value adds it contents to value for button or data-value for other element types
             }
 
             if (element.button) {
-                //Likely need to build a seperate function to actually do the removing on click, since it just relying on checking if the listened button has the right class it should be easy to do and add it to the module.
+           
                 let button = document.createElement('button')
 
                 if (element.delete) {

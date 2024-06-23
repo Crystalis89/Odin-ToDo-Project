@@ -1,11 +1,3 @@
-/* Style notes
-Seperate the buttons more. Give delete an icon, possibly edit too. Change their color too
-
-
-Set size for counter tabs 
-
-
-*/
 
 body {
     border: solid gold;
@@ -115,7 +107,6 @@ border-left: solid green;
 .categorydiv, .scheduledivitems, .homecounter {
 
     margin: 20px;
-    /* border: solid; */
     display: flex;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 1); 
     border: solid rgba(255, 255, 255, 0.5);
@@ -190,7 +181,7 @@ margin: 0.5rem;
 }
 
 #editcontainer form {
-    background-color: black; /* Ensure the form has a solid background */
+    background-color: black; 
 }
 
 

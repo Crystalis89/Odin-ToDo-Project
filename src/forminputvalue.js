@@ -4,11 +4,6 @@ let forminputs = {
         tempDiv.textContent = input;
         return tempDiv.innerHTML;
     },        
-        
-    // let edittextform = document.getElementById('edittext') ? sanitizeInput(document.getElementById('edittext').value.trim()) : '';
-    // let editdateform = document.getElementById('editdate') ? sanitizeInput(document.getElementById('editdate').value.trim()) : '';
-    // let editstatus = document.getElementById('editstatus') ? sanitizeInput(document.getElementById('editstatus').value.trim()) : '';
-    // let editelementname = document.getElementById('editelementname') ? sanitizeInput(document.getElementById('editelementname').value.trim()) : '';
 
  
     'formobject': function formvaluesobject(targetform) {  

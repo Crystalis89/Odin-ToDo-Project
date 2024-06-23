@@ -1,0 +1,29 @@
+{
+  "name": "odin-todo-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "src": "src"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack "
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.2.0",
+    "css-loader": "^7.1.1",
+    "date-fns": "^3.6.0",
+    "eslint": "^9.2.0",
+    "globals": "^15.2.0",
+    "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-plugin": "^1.0.5"
+  }
+}

@@ -329,12 +329,10 @@ contentcontainer.addEventListener('click', (event) => {
     let targetdiv = event.target.parentElement
     let ObjectToEditID = event.target.parentElement.firstChild.id
     let TargetObjectIndex
-    // let targetelementname
  
     for (const entry of localsave) {
         if (entry.id === ObjectToEditID) {
             TargetObjectIndex = localsave.indexOf(entry)
-            // targetelementname = localsave[TargetObjectIndex].elementname
         }
     }
 
@@ -357,12 +355,12 @@ contentcontainer.addEventListener('click', (event) => {
         dataforedit.classes = dataforedit.texttarget.getAttribute('class') 
         dataforedit.id = ObjectToEditID
         dataforedit.localindex = TargetObjectIndex
-        // entrycounter(localsave[dataforedit.localindex], localsave[dataforedit.localindex].counterid )  
+      
 
         return
     }
 
-    // let elementsavecheck = localsave.filter((v) => v.elementname === targetelementname)
+
    
     function deleteEntry(index) {
         if (localsave[index].category !== 'categorydiv' && targetdiv) {
