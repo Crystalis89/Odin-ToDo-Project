@@ -13,6 +13,8 @@ let localsave = []
 
 //When called saves localsave's contents to localStorage.
 function saveToLocalStorage(data){
+
+    
     try {
         if(Array.isArray(data)){
             localStorage.setItem("localsave", JSON.stringify(data)); 
@@ -34,7 +36,9 @@ window.addEventListener('beforeunload', () => {
 
 //Restores from localStorage on page load. Uncomment the splice to remove the top 2 entries if there a bugged save entry.
 function storagerestore() {
-
+    if (!localStorage || localStorage.length === 0) {
+        return; // Exit the function if localStorage is empty or null
+    } else {
 
     try {
         localsave = JSON.parse(localStorage.getItem('localsave'))
@@ -56,6 +60,7 @@ function storagerestore() {
         }
     }
     entrycounter()
+    }
 }
 
 storagerestore()
